@@ -6,12 +6,12 @@
 int main() {
 
     next: {
-        float num1 = 0.0;
+        double num1 = 0;
         char oper = '\0';
-        float num2 = 0.0;
-        float ans = 0.0;
+        double num2 = 0;
+        double ans = 0;
         printf("Input your Calculation:\n");
-        scanf("%f %c %f", &num1, &oper, &num2);
+        scanf("%ld %c %ld", &num1, &oper, &num2);
         switch (oper)
             {
             case '+': ans = num1+num2;
@@ -25,8 +25,8 @@ int main() {
             case '^': ans = pow(num1, num2);
                 break;
             default: goto fail;
-            }
-            printf("The answer is: %1.3f\n", ans);
+            }   
+            printf("The answer is: %1.3ld\n", ans);
             goto next;
         }
             fail: {
